@@ -192,14 +192,61 @@
 
   </div>
 </section>
+<footer class="newsletter-footer fade">
+  <div class="wrap">
+    
+    <div class="footer-grid">
+      
+      <!-- Coluna da Esquerda: Título e Texto -->
+      <div class="footer-text">
+        <h2>Connect with Us</h2>
+        <p>Get exclusive access to special offers, new product launches, skincare tips, wellness inspirations, giveaways, and more!</p>
+      </div>
 
-<footer>
-  <div class="brandmark">
-    <span>LEAF</span>
-    <span class="leaf-dot"></span>
-    <span>DAILY CARE</span>
+      <!-- Coluna da Direita: Formulário -->
+      <div class="footer-form-wrapper">
+        <form class="newsletter-form" action="#" method="POST">
+          
+          <!-- Campo de E-mail -->
+          <input type="email" name="email" class="form-input" placeholder="Enter Email" required>
+          
+          <!-- Select: Skin Type -->
+          <div class="select-wrapper">
+            <select name="skin_type" class="form-input form-select" required>
+              <option value="" disabled selected>Skin type</option>
+              <option value="normal">Normal</option>
+              <option value="dry">Dry</option>
+              <option value="oily">Oily</option>
+              <option value="combination">Combination</option>
+            </select>
+          </div>
+
+          <!-- Radio Buttons: Sensitive Skin -->
+          <div class="form-group-radio">
+            <span class="radio-label">Is your skin sensitive?</span>
+            <div class="radio-options">
+              <label class="radio-item">
+                <input type="radio" name="sensitive" value="yes"> Yes
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="sensitive" value="no"> No
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="sensitive" value="sometimes"> Sometimes
+              </label>
+            </div>
+          </div>
+
+          <!-- Botão Sign Up -->
+          <button type="submit" class="btn-signup">Sign up</button>
+
+        </form>
+      </div>
+
+    </div> <!-- /footer-grid -->
+
+   
   </div>
-  <p>Serinity Serum</p>
 </footer>
 
 <script>

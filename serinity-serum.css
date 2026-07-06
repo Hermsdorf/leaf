@@ -476,26 +476,194 @@
   color: #6a4479;
 }
 
- /* ---------- footer ---------- */
-footer {
-  padding: 40px 0 50px;
-  text-align: center;
+/* ---------- Novo Rodapé / Newsletter ---------- */
+.newsletter-footer {
+  padding: 80px 0 40px 0;
+  border-top: 1px solid var(--accent-line);
+  background: var(--bg); /* Fundo padrão do site (#fffcef) ou mude para #ffffff se quiser contraste */
 }
 
-/* REGRA ATUALIZADA PARA O BRANDMARK NO RODAPÉ: */
-footer .brandmark {
-  display: flex !important;
-  justify-content: center !important; /* Centraliza os elementos horizontais (LEAF, ponto, DAILY CARE) */
+/* Grade principal dividindo texto (esquerda) e formulário (direita) */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr; /* O lado do formulário ganha um pouquinho mais de espaço */
+  gap: 64px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+/* Coluna da Esquerda */
+.footer-text {
+  text-align: left;
+}
+
+.footer-text h2 {
+  font-family: 'Petrona', serif;
+  font-size: clamp(36px, 4.5vw, 48px);
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 16px;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.footer-text p {
+  font-family: 'futura-pt', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 300;
+  max-width: 440px;
+}
+
+/* Coluna da Direita (Formulário) */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Estilo unificado para Inputs e Selects (Fundo bege claro arredondado da imagem) */
+.form-input {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #f7eff6; /* Tom derivado do var(--accent-tint), super suave */
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 16px;
+  color: var(--accent);
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.form-input:focus {
+  background-color: #ffffff;
+  border-color: var(--accent);
+}
+
+/* Customização do Select para manter a seta limpa */
+.select-wrapper {
+  position: relative;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Seta customizada do select usando SVG na cor roxa da marca */
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236a4479' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+/* Grupo de Radio Buttons (Is your skin sensitive?) */
+.form-group-radio {
+  margin: 6px 0 4px 0;
+  text-align: left;
+}
+
+.radio-label {
+  display: block;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15px;
+  color: var(--accent);
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.radio-options {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-item {
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15px;
+  color: var(--accent);
+  cursor: pointer;
+  display: flex;
   align-items: center;
-  width: 100%;                        /* Garante que a caixa ocupe a largura toda do rodapé para poder centralizar */
-  margin: 0 auto 10px auto;           /* Centraliza a caixa na tela e dá 10px de margem inferior */
+  gap: 6px;
 }
 
-footer p {
-  font-size: 12px;
-  color: var(--ink-soft);
-  letter-spacing: 0.04em;
-  text-align: center;
+/* Estilo do bolinha do Radio */
+.radio-item input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+
+.radio-item input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+/* Botão Sign Up (Estilo Outline como na imagem) */
+.btn-signup {
+  width: 100%;
+  padding: 16px;
+  background-color: transparent;
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 18px;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 8px;
+}
+
+.btn-signup:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+/* Parte inferiorzinha com a marca LEAF * DAILY CARE */
+.footer-bottom {
+  border-top: 1px solid var(--accent-line);
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bottom .brandmark {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
 }
 
   /* ---------- responsive ---------- */
