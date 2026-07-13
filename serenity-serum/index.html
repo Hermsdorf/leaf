@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Serinity Serum — LEAF Daily Care</title>
+
+<style>
+:root{
+    --bg:#fffcef;
+    --ink:#2b2118;
+    --ink-soft:#5b5148;
+    --accent:#6a4479;
+    --accent-tint:#f1e9f4;
+    --accent-line:#c9aed4;
+    --card:#fffdf6;
+    --max:1080px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+
+  html{scroll-behavior:smooth;}
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'futura-pt', sans-serif; 
+    font-weight: 300;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  h1, h2, h3, .serif {
+    font-family: 'Petrona', serif;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .eyebrow {
+    font-family: 'futura-pt', sans-serif;
+    font-size: 16px;          
+    letter-spacing: normal;   
+    text-transform: none;     
+    color: var(--ink-soft);   
+    font-weight: 300;         
+    display: block;
+    max-width: 50%;           
+  }
+
+  a{color:inherit;}
+
+  /* ---------- top hairline ---------- */
+  .hairline{
+    height:1px;
+    background:var(--accent-line);
+    width:100%;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    padding:28px 0;
+  }
+  .brandmark{
+    display:flex;
+    justify-content: flex-start; 
+    align-items: center;       
+    gap:10px;
+  }
+  .brandmark span{
+    font-family: 'Petrona', serif;
+    font-size:13px;
+    letter-spacing:0.4em;
+    color:var(--accent);
+    font-weight:500;
+  }
+  .brandmark .leaf-dot{
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--accent);
+  }
+
+  .brandmark .leaf-dot{
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--accent);
+  }
+
+/* ---------- hero ---------- */
+  .hero {
+    text-align: left;
+    padding: 0 0 40px 0; 
+  }
+
+  
+  .hero-bg-wrapper h2,
+  .hero-bg-wrapper h1,
+  .hero h2,
+  .hero h1 {
+    font-family: 'Petrona', serif !important;
+    font-size: clamp(32px, 5vw, 54px) !important;
+    font-weight: 400 !important;
+    font-style: normal !important; 
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-top: 0 !important;
+    margin-bottom: 24px;
+    color: var(--accent);
+  }
+
+  .hero .eyebrow {
+    font-family: 'futura-pt', sans-serif;
+    font-size: 16px;
+    letter-spacing: normal;
+    text-transform: none;
+    color: var(--ink-soft);
+    font-weight: 300;
+    display: block;
+    max-width: 50%;
+    margin-bottom: 18px;
+  }
+
+  .hero-ornament {
+    margin: 0;
+    width: 110px;
+  }
+
+  /* ---------- section shell ---------- */
+  section{
+    padding:64px 0;
+  }
+  .section-divider{
+    height:1px;
+    background:var(--accent-line);
+    opacity:0.6;
+  }
+
+  .fade{
+    opacity:0;
+    transform:translateY(18px);
+    transition:opacity 0.8s ease, transform 0.8s ease;
+  }
+  .fade.in{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+  /* ---------- two-col text sections ---------- */
+  .two-col{
+    display:grid;
+    grid-template-columns:1fr 1.4fr;
+    gap:48px;
+    align-items:start;
+  }
+  .two-col h2{
+    font-size:26px;
+    font-style:italic;
+    position:sticky;
+    top:24px;
+  }
+  .two-col p{
+    color:var(--ink-soft);
+    font-size:16.5px;
+    max-width:560px;
+  }
+  .stack{
+    display:flex;
+    flex-direction:column;
+    gap:46px;
+  }
+  /* ---------- Custom Bullet List (Helps with) ---------- */
+.two-col .custom-bullet-list {
+  list-style: none;         /* Remove a bolinha preta padrão do navegador */
+  padding: 0;
+  margin: 0;
+  max-width: 560px;         /* Mantém a mesma largura máxima do parágrafo original */
+}
+
+.two-col .custom-bullet-list li {
+  color: var(--ink-soft);   /* Mantém a cor do texto de parágrafo */
+  font-size: 16.5px;        /* Mantém o tamanho original do parágrafo */
+  position: relative;
+  padding-left: 20px;       /* Cria o espaço para a nossa bolinha customizada */
+  margin-bottom: 12px;      /* Dá um respiro elegante entre cada item da lista */
+}
+
+.two-col .custom-bullet-list li:last-child {
+  margin-bottom: 0;         /* Remove a margem extra do último item */
+}
+
+/* Cria a bolinha roxa customizada */
+.two-col .custom-bullet-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;                /* Alinha a bolinha verticalmente com o texto */
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent); /* Puxa o seu tom de roxo exato */
+}
+
+  /* ---------- ingredient cards ---------- */
+  .ingredients h2{
+    text-align:center;
+    font-size:30px;
+    font-style:italic;
+    margin-bottom:44px;
+  }
+  .card-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:26px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--accent-line);
+    border-radius:2px;
+    padding:34px 28px;
+  }
+  .card .num{
+    font-family: 'Petrona', serif;
+    font-style:italic;
+    color:var(--accent-line);
+    font-size:14px;
+    display:block;
+    margin-bottom:16px;
+  }
+  .card h3{
+    font-family: 'Petrona', serif;
+    font-weight:500;
+    color:var(--accent);
+    font-size:19px;
+    margin-bottom:12px;
+    letter-spacing:0.01em;
+  }
+  .card p{
+    color:var(--ink-soft);
+    font-size:15px;
+  }
+
+  
+/* ---------- badges ---------- */
+.badges {
+  text-align: center;
+}
+
+
+.badges h2 {
+  font-family: 'futura-pt', sans-serif !important;
+  font-size: 16px !important;                     
+  text-transform: uppercase !important;           
+  font-weight: 300 !important;                    
+  letter-spacing: 0.2em;                          
+  color: var(--accent);                           
+  margin-bottom: 8px;                             
+}
+  .badge-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+    margin-top:28px;
+  }
+  .badge{
+    font-size:12.5px;
+    letter-spacing:0.06em;
+    padding:10px 20px;
+    border:1px solid var(--accent);
+    color:var(--accent);
+    border-radius:999px;
+    font-weight:500;
+    white-space:nowrap;
+  }
+  .badge-note{
+    margin-top:22px;
+    font-size:13px;
+    color:var(--ink-soft);
+    font-style:italic;
+    max-width:640px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  /* ---------- Free From ---------- */
+.free-from-banner {
+  background: var(--accent);
+  color: #ffffff;           
+  padding: 24px 0;          
+}
+
+.free-from-line {
+  display: flex;
+  flex-wrap: wrap;           
+  justify-content: center;   
+  align-items: center;       
+  gap: 12px;                 
+  font-family: 'futura-pt', sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+
+.free-from-line .title {
+  font-weight: 500;          
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-right: 4px;         
+}
+
+
+.free-from-line .leaf-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #ffffff;       
+  opacity: 0.8;              
+}
+
+/* ---------- brand story ---------- */
+.story {
+  background: var(--accent-tint);
+  border-top: 1px solid var(--accent-line);
+  border-bottom: 1px solid var(--accent-line);
+  padding: 10px 0; 
+}
+
+.story .wrap {
+  padding: 30px 32px; 
+  
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;                         
+  align-items: center;               
+}
+
+
+.story-text {
+  text-align: left;
+}
+
+.story-image {
+  display: flex;
+  justify-content: flex-end; 
+}
+
+.story-image img {
+  max-width: 100%;           
+  height: auto;
+  border-radius: 4px;      
+}
+
+.story p{
+    font-family: 'futura-pt', sans-serif;
+    font-style:normal;
+    font-size:23px;
+    line-height:1.55;
+    color:var(--ink);
+    font-weight:300;
+    }
+
+    /* ---------- brand story ---------- */
+.story h2 {
+  font-family: 'Petrona', serif;   
+  font-size: 28px;                 
+  font-style: normal;              
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--accent);            
+  margin-bottom: 16px;             
+  text-transform: none;            
+  letter-spacing: normal;
+}
+  /* ---------- why acai / closing ---------- */
+.closing {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.closing .inner {
+  position: relative;
+  max-width: 660px;
+  margin: 0 auto;
+}
+
+
+.closing .eyebrow {
+  font-family: 'futura-pt', sans-serif !important;
+  font-size: 16px !important;                     
+  text-transform: uppercase !important;           
+  font-weight: 300 !important;                    
+  letter-spacing: 0.2em;                          
+  color: var(--accent);                           
+  
+  
+  display: block;
+  max-width: 100% !important;   
+  text-align: center !important;
+  margin: 0 auto 12px auto;     
+}
+
+.closing h2 {
+  font-size: 32px;
+  font-style: normal;
+  margin-bottom: 18px;
+}
+
+.closing p {
+  color: var(--ink-soft);
+  font-size: 16px;
+}
+
+/* ---------- Promotion  ---------- */
+.promo-section {
+  background: #fffcef;            
+  border-top: 1px solid var(--accent-line);
+  border-bottom: 1px solid var(--accent-line);
+  padding: 30px 0;  
+}
+
+.promo-section .wrap {
+  padding: 30px 32px;
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.promo-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr; 
+  gap: 150px;
+  align-items: center;
+}
+
+.promo-image {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.promo-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.promo-text {
+  text-align: left;
+}
+
+.promo-text h2 {
+  font-family: 'Petrona', serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--accent);
+  margin-bottom: 16px;
+  text-transform: none;
+}
+
+.promo-text p {
+  font-family: 'futura-pt', sans-serif; 
+  font-size: 20px;
+  color: var(--ink);
+  font-weight: 300;
+  margin-bottom: 28px;
+}
+
+/* ---------- Shop Now ---------- */
+.btn, a.btn, button, input[type=submit] {
+  background: #6a4479;           
+  border: 1.5px solid #6a4479;
+  color: #fff;
+  font-size: 16px;               
+  font-family: 'futura-pt', sans-serif; 
+  font-weight: 500;
+  line-height: 1em;
+  height: auto;
+  margin: 0;
+  text-decoration: none !important;
+  cursor: pointer;
+  padding: 1em 28px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 3px;
+  transition: background-color .2s ease, border-color .2s ease, opacity .2s ease;
+  display: inline-block;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;      
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover, a.btn:hover {
+  background: transparent;
+  color: #6a4479;
+}
+
+/* ---------- Newsletter ---------- */
+.newsletter-footer {
+  padding: 80px 0 40px 0;
+  border-top: 1px solid var(--accent-line);
+  background: var(--bg); 
+}
+
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr; 
+  gap: 64px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.footer-text {
+  text-align: left;
+}
+
+.footer-text h2 {
+  font-family: 'Petrona', serif;
+  font-size: clamp(36px, 4.5vw, 48px);
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 16px;
+  line-height: 1.1;
+  text-transform: none;
+}
+
+.footer-text p {
+  font-family: 'futura-pt', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink);
+  font-weight: 300;
+  max-width: 440px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: #f7eff6; 
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 16px;
+  color: var(--accent);
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: var(--accent);
+  opacity: 0.8;
+}
+
+.form-input:focus {
+  background-color: #ffffff;
+  border-color: var(--accent);
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.select-wrapper::after {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 12px;
+  height: 8px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236a4479' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+
+.form-group-radio {
+  margin: 6px 0 4px 0;
+  text-align: left;
+}
+
+.radio-label {
+  display: block;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15px;
+  color: var(--accent);
+  margin-bottom: 8px;
+  font-weight: 400;
+}
+
+.radio-options {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radio-item {
+  font-family: 'futura-pt', sans-serif;
+  font-size: 15px;
+  color: var(--accent);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.radio-item input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--accent);
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+}
+
+.radio-item input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+.btn-signup {
+  width: 100%;
+  padding: 16px;
+  background-color: transparent;
+  border: 1.5px solid var(--accent);
+  border-radius: 6px;
+  font-family: 'futura-pt', sans-serif;
+  font-size: 18px;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 8px;
+}
+
+.btn-signup:hover {
+  background-color: var(--accent);
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--accent-line);
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-bottom .brandmark {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center;
+  width: 100%;
+}
+
+  /* ---------- responsive ---------- */
+  @media (max-width: 800px) {
+    /* 1. Troca a imagem de fundo do Header para a versão Mobile */
+    .hero-bg-wrapper {
+      background-image: url('sample_serum_header_mobile.png') !important;
+      background-position: center bottom; /* Ajusta o foco da foto mobile se necessário */
+    }
+
+    /* 2. Empilha a seção "How to use" e Cards */
+    .two-col { grid-template-columns: 1fr; gap: 16px; }
+    .two-col h2 { position: static; }
+    .card-grid { grid-template-columns: 1fr; }
+    .story p { font-size: 19px; }
+
+    /* 3. Empilha a Brand Story e garante a Imagem em cima */
+    .story-grid {
+      grid-template-columns: 1fr; /* Muda de 2 colunas para 1 coluna (empilhado) */
+      gap: 24px;
+    }
+    .story-image {
+      order: -1; /* O segredo: Força a imagem a subir para antes do texto no celular! */
+      justify-content: center;
+    }
+    .story-text {
+      text-align: center; /* Centraliza o texto e o botão no celular */
+    }
+
+    /* 4. Empilha a Promo Section (a imagem já era a primeira, só empilhamos) */
+    .promo-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    .promo-image {
+      justify-content: center;
+    }
+    .promo-text {
+      text-align: center;
+    }
+
+    /* 5. Empilha o Footer (Título/Texto em cima, Formulário embaixo) */
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+    .footer-text {
+      text-align: center;
+    }
+    .footer-text p {
+      margin: 0 auto; /* Centraliza o parágrafo explicativo */
+    }
+    .form-group-radio {
+      text-align: center;
+    }
+    .radio-options {
+      justify-content: center; /* Centraliza as opções Yes/No/Sometimes */
+    }
+  }
+
+  /* ---------- reduced motion ---------- */
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    .fade{opacity:1; transform:none; transition:none;}
+  }
+
+  :focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:3px;
+  }
+
+ /* ---------- Fontes ---------- */
+@font-face {
+  font-family: 'futura-pt';
+  src: url('futura/Futura Book font.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'futura-pt';
+  src: url('futura-pt/FuturaCyrillicMedium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Petrona';
+  src: url('Petrona/static/Petrona-Regular.ttf') format('truetype'); 
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Petrona';
+  src: url('Petrona/static/Petrona-Italic.ttf') format('truetype'); 
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* ---------- Hero Background Wrapper ---------- */
+.hero-bg-wrapper {
+  background-image: url('sample_serum_header.png'); 
+  
+  background-size: cover;         
+  background-position: center;    
+  background-repeat: no-repeat;   
+  min-height: 60vh;               
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+</style>
+</head>
+<body>
+
+<div class="hairline"></div>
+
+<!-- Div externa que segura a imagem de fundo -->
+<div class="hero-bg-wrapper">
+  
+  <header>
+    <div class="wrap">
+      <div class="brandmark">
+        <img src="sample_LOGO.svg" alt="Logo" class="hero-ornament" aria-hidden="true">
+      </div>
+    </div>
+  </header>
+
+  <section class="hero fade">
+    <div class="wrap">
+      <h2>Thank you for <br> trying LEAF</h2>
+      <span class="eyebrow">We hope this small gesture reminds you that caring for yourself<br>is one of the ways you care for the life you live.</span>
+    </div>
+  </section>
+
+</div> <!-- /hero-bg-wrapper -->
+
+<div class="wrap"><div class="section-divider"></div></div>
+
+<section class="fade">
+  <div class="badges wrap">
+    <h2>
+      Serenity Serum is thoughtfully formulated for sensitive skin to restore hydration, support your skin microbiome, and help maintain your skin's natural balance.<br><br>
+    </h2> 
+  </div>
+  <div class="wrap"><div class="section-divider"></div></div> <br>  <br>
+  <div class="wrap two-col">
+    <h2>How to use</h2>
+    <p>Apply morning and evening onto clean, dry skin. Gently massage over the face and neck until fully absorbed before applying your next skincare step.<br><br>
+    Ingredients and technologies that are genuinely part of the formulation. Use only as directed. For external use only.</p>
+  </div>
+</section>
+
+<div class="wrap"><div class="section-divider"></div></div>
+
+<section class="fade">
+  <div class="wrap two-col">
+    <h2>Helps with</h2>
+    <ul class="custom-bullet-list">
+      <li>Hydrates dry and sensitive skin</li>
+      <li>Soothes visible irritation</li>
+      <li>Supports the skin barrier</li>
+      <li>Helps balance the skin microbiome</li>
+      <li>Protects against environmental stressors with antioxidant-rich botanicals</li>
+    </ul>
+  </div>
+</section>
+
+<div class="wrap"><div class="section-divider"></div></div>
+
+<section class="ingredients fade">
+  <div class="wrap">
+    <h2>Key ingredients</h2>
+    <div class="card-grid">
+      <div class="card">
+        
+        <h3>Amazonian AÇAI Berry</h3>
+        <p>Naturally rich in antioxidants, minerals, and omega 6 &amp; 9 to help nourish, protect, and revitalize the skin.</p>
+      </div>
+      <div class="card">
+        
+        <h3>Probaccillius Revive</h3>
+        <p>Supports the skin barrier, helps reduce the appearance of redness and improves hydration.</p>
+      </div>
+      <div class="card">
+        
+        <h3>Bamboo Botanical Extract Powder</h3>
+        <p>A silica-rich botanical extract that soothes, hydrates, improves elasticity, and leaves skin soft and balanced.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="wrap"><div class="section-divider"></div></div>
+
+<section class="fade">
+  <div class="wrap two-col">
+    <h2>Full Ingredient List</h2>
+    <p>Aqua, Propanediol, Glycerol, Aloe Barbadensis Leaf Juice Powder, Caprylyl Glycol / Ethylhexylglycerin, Lactobacillus Ferment Lysate, Magnesium Ascorbyl Phosphate, Xanthan Gum, Niacinamide, Allantoin, Betaine, Bambusa Vulgaris Extract, Euterpe Oleracea Fruit Extract.
+    </p>
+  </div>
+</section>
+
+<div class="wrap"><div class="section-divider"></div></div>
+
+<section class="badges fade">
+  <div class="wrap">
+    <h2>Formulated with care</h2>
+    <div class="badge-row">
+      <span class="badge">Dermatologist approved</span>
+      <span class="badge">Naturally Derived</span>
+      <span class="badge">Fragrance-free</span>
+      <span class="badge">For Sensitive Skin</span>
+      <span class="badge">Vegan</span>
+      <span class="badge">No animal testing</span>
+      <span class="badge">Formulated for your skin microbiome</span>
+      <span class="badge">Made in USA</span>
+    </div>
+    <p class="badge-note">*Laboratory Patch-Testing for sensitive skin.</p>
+  </div>
+</section>
+
+
+<section class="free-from-banner fade">
+  <div class="wrap">
+    <div class="free-from-line">
+      
+      <!-- Título em destaque -->
+      <span class="title">FREE FROM:</span>
+      
+      <!-- Itens separados pelos pontos da identidade visual -->
+      <span>Parabens</span>
+      <span class="leaf-dot"></span>
+      <span>Phthalates</span>
+      <span class="leaf-dot"></span>
+      <span>Synthetic dyes</span>
+      <span class="leaf-dot"></span>
+      <span>Synthetic fragrances</span>
+      <span class="leaf-dot"></span>
+      <span>Gluten</span>
+      <span class="leaf-dot"></span>
+      <span>Non-GMO</span>
+
+    </div>
+  </div>
+</section>
+
+
+
+<section class="story fade">
+  <div class="wrap">
+    
+    <div class="story-grid">
+      
+      <div class="story-text">
+        <h2>LEAF began with a simple idea:</h2>
+        <p>
+          The way we care for ourselves is often found<br>
+          in the small choices we make every day. <br>
+          Inspired by nature and guided by science,<br>
+          we create thoughtful daily care to be<br>
+          one of those choices.</p><br><br>
+    
+        <a href="https://www.instagram.com/leaf.dailycare/" target="_blank" rel="noopener noreferrer" class="btn">Join our community</a>
+      </div>
+
+
+      <div class="story-image">
+        <img src="sample_nutrimask.png" alt="LEAF Nutrimask" />
+      </div>
+
+    </div> 
+
+  </div>
+</section>
+
+<section class="closing fade">
+  <div class="wrap">
+    <div class="inner">
+      <span class="eyebrow"></span>
+      <h2>Why Açaí Berry: Tree of Life</h2>
+      <p>We chose Amazonian Açaí because it reflects the way we see nature, not simply as a source of ingredients, but as a source of wisdom. Its remarkable concentration of antioxidants, essential fatty acids, vitamins, and minerals makes it one of the most extraordinary botanicals for caring for the skin.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Criamos a classe promo-section para ter o fundo bege e o layout invertido -->
+<section class="promo-section fade">
+  <div class="wrap">
+    
+    <div class="promo-grid">
+
+      <div class="promo-image">
+        <img src="saple_product-serum.png" alt="Serenity Serum Full Size" />
+      </div>
+
+      <!-- Coluna 2 (Direita): Texto e Botão -->
+      <div class="promo-text">
+        <h2>Continue your daily ritual <br> with Serenity Serum</h2>
+        <p>Experience the full-size 30ml bottle for daily <br> hydration, comfort and balance.</p>
+        
+        
+        <!-- Botão Shop Now adicionado aqui: -->
+        <a href="https://leafdailycare.com/products/brightening-serum?pr_prod_strat=e5_desc&pr_rec_id=ee988c79f&pr_rec_pid=8157785489717&pr_ref_pid=8155878883637&pr_seq=uniform" target="_blank" rel="noopener noreferrer" class="btn">Shop Full Size</a>
+      </div>
+
+    </div> <!-- /promo-grid -->
+
+  </div>
+</section>
+<footer class="newsletter-footer fade">
+  <div class="wrap">
+    
+    <div class="footer-grid">
+      
+      <!-- Coluna da Esquerda: Título e Texto -->
+      <div class="footer-text">
+        <h2>Join the LEAF Community</h2>
+        <p>Get exclusive access to special offers, new product launches, skincare tips, wellness inspirations, giveaways, and more!</p>
+      </div>
+
+      <!-- Coluna da Direita: Formulário -->
+      <div class="footer-form-wrapper">
+        <form class="newsletter-form" action="#" method="POST">
+          
+          <!-- Campo de E-mail -->
+          <input type="email" name="email" class="form-input" placeholder="Enter Email" required>
+          
+          <!-- Select: Skin Type -->
+          <div class="select-wrapper">
+            <select name="skin_type" class="form-input form-select" required>
+              <option value="" disabled selected>Skin type</option>
+              <option value="normal">Normal</option>
+              <option value="dry">Dry</option>
+              <option value="oily">Oily</option>
+              <option value="combination">Combination</option>
+            </select>
+          </div>
+
+          <!-- Radio Buttons: Sensitive Skin -->
+          <div class="form-group-radio">
+            <span class="radio-label">Is your skin sensitive?</span>
+            <div class="radio-options">
+              <label class="radio-item">
+                <input type="radio" name="sensitive" value="yes"> Yes
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="sensitive" value="no"> No
+              </label>
+              <label class="radio-item">
+                <input type="radio" name="sensitive" value="sometimes"> Sometimes
+              </label>
+            </div>
+          </div>
+
+          <!-- Botão Sign Up -->
+          <button type="submit" class="btn-signup">Sign up</button>
+
+        </form>
+      </div>
+
+    </div> <!-- /footer-grid -->
+
+   
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
